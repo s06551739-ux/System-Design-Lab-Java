@@ -1,18 +1,18 @@
-## Getting Started
+# Aura OS
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This repository hosts the Aura OS application.
 
-## Folder Structure
+## Importing the Base44 builder app
 
-The workspace contains two folders by default, where:
+The Aura OS app is built in the Base44 builder. To get its generated source code
+into this repository, connect the repo from inside the builder's GitHub
+integration (app settings → Connect to GitHub / repository sync). The builder
+will push the app's generated frontend and backend source into this repo.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Once the code is here, run the app locally with:
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+```bash
+docker compose -f docker-compose.base44.yml up -d --build
+```
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+The app is served on http://localhost:3000.
